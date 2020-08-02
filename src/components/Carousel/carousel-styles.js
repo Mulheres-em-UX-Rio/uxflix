@@ -8,10 +8,11 @@ export const Title = styled.h3`
   line-height: 1;
   font-size: 26px;
   line-height: 1;
-  margin-bottom: 20px;
   display: inline-block;
   padding: 0px;
   border-radius: 0px;
+  margin: 0;
+  padding-left: 5%;
 
   @media (max-width: 800px) {
     font-size: 18px;
@@ -51,8 +52,7 @@ export const VideoCardList = styled.ul`
 export const VideoCardGroupContainer = styled.section`
   color: white;
   min-height: 197px;
-  margin-left: 5%;
-  margin-bottom: 40px;
+  margin: 40px 0;
   &:last-of-type {
     margin-bottom: 120px;
   }

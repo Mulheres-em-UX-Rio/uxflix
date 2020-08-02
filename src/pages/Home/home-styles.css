@@ -1,6 +1,6 @@
 .banner-main {
     margin: 0 5%;
-    height: 70vh;
+    height: 60vh;
     color: #fff;
     display: flex;
     align-items: center;
@@ -22,7 +22,6 @@
     width: 45%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 50px;
 }
 .banner-main section img {
     width: 85%;
@@ -30,12 +29,16 @@
     align-self: center;
 }
 h2 {
+    font-family: "Klavika-Semibold";
     font-style: normal;
     font-weight: 300;
     font-size: 40px;
     line-height: 45px;
     margin-top: 0;
     margin-bottom: 32px;
+}
+h2 i {
+    font-family: "Klavika-Bold";
 }
 
 

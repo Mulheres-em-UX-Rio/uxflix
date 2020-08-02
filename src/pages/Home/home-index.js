@@ -29,7 +29,7 @@ function Home() {
             <i>Experiência do Usuário</i>
           </h2>
           <Button as={Link} className="ButtonLink" to="/cadastro/video">
-            Enviar vídeo
+            Enviar conteúdo
           </Button>
         </section>
         <section>
