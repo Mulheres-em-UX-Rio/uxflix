@@ -31,7 +31,7 @@ function CadastroCategoria() {
 
   useEffect(() => {
     if (window.location.href.includes('localhost')) {
-      const URL = 'http://localhost:8080/categorias';
+      const URL = 'https://muxflix.herokuapp.com/categorias';
       fetch(URL)
         .then(async (respostaDoServer) => {
           if (respostaDoServer.ok) {
@@ -71,7 +71,7 @@ function CadastroCategoria() {
         />
 
         <FormField
-          label="Descrição"
+          label="Descrição:"
           type="textarea"
           name="descricao"
           value={values.descricao}
@@ -93,7 +93,7 @@ function CadastroCategoria() {
 
       <ul>
         {categorias.map((categoria) => (
-          <li key={`${categoria.nome}`}>
+          <li key={`${categoria.id}`}>
             {categoria.titulo}
           </li>
         ))}
