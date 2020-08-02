@@ -22,6 +22,7 @@
   --white: #FFFFFF;
   --frontEnd: #6BD1FF;
   --backEnd: #00C86F;
+  --secondary: #8e7cc3;
 }
 
 html,
@@ -75,4 +76,21 @@ button[type="submit"] {
   border: 0;
   border-radius: 5px;
   cursor: pointer;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background-color: #ea8774;
+  transform: scale(1.03);
+}
+
+p {
+  color: var(--blackLighter);
+  margin: 0;
+}
+
+i {
+  color: var(--primary);
+  text-decoration: none;
+  font-style: unset;
 }

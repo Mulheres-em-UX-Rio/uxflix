@@ -8,6 +8,7 @@ const Main = styled.main`
   color: var(--white);
   flex: 1;
   padding: 50px 5%;
+  border-top: 1px solid #252525;
 `;
 
 function PageDefault({ children }) {

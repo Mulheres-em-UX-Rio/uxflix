@@ -1,22 +1,25 @@
 import styled from 'styled-components';
 
 const Button = styled.a`
-    color: var(--white);
-    border: 1px solid var(--white);
+    width: max-content;
+    color: var(--black);
+    border: none;
     box-sizing: border-box;
+    background-color: var(--primary);
     cursor: pointer;
-    padding: 16px 24px;
+    padding: 10px 20px;
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 22px;
     outline: none;
     border-radius: 5px;
     text-decoration: none;
     display: inline-block;
-    transition: opacity .3s;
+    transition: all ease-in-out .3s;
     &:hover,
     &:focus {
-        opacity: .5;
+        background-color: #ea8774;
+        transform: scale(1.03);
     }
 `;
 

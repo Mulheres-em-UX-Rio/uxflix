@@ -1,20 +1,41 @@
 import React from 'react';
 import Menu from '../../components/Menu/menu-index';
 import dadosIniciais from '../../data/dados_iniciais.json';
-import BannerMain from '../../components/BannerMain';
+import BannerMain from '../../components/BannerMain/banner_main-index';
 import Carousel from '../../components/Carousel/carousel-index';
 import Footer from '../../components/Footer/footer-index';
+import './home-styles.css';
+
+import imgBanner from '../../assets/imgs/uxflix-logo-purple.svg';
+import { Link } from 'react-router-dom';
+import Button from '../../components/Button/button-index';
 
 function Home() {
   return (
-    <div style={{ background: '#141414' }}>
+    <div>
       <Menu />
 
-      <BannerMain
-        videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
-        url={dadosIniciais.categorias[0].videos[0].url}
-        videoDescription="O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"
-      />
+      {/* <BannerMain
+        // url={dadosIniciais.categorias[0].videos[0].url}
+        bannerTitle="Repositório colaborativo de conteúdos relacionados à disciplina de Experiência do Usuário."
+        bannerImg={imgBanner}
+      /> */}
+
+      <div className="banner-main">
+        <section>
+          <h2>
+            Repositório colaborativo de conteúdos relacionados à disciplina de
+            {' '}
+            <i>Experiência do Usuário</i>
+          </h2>
+          <Button as={Link} className="ButtonLink" to="/cadastro/video">
+            Enviar vídeo
+          </Button>
+        </section>
+        <section>
+          <img src={imgBanner} />
+        </section>
+      </div>
 
       <Carousel
         ignoreFirstVideo

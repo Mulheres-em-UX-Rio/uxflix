@@ -13,11 +13,10 @@ function Menu() {
         <img src={Logo} className="logo" alt="UXFlix logo" />
       </Link>
 
-      <input type="search" className="search-input" />
-
-      <Button as={Link} className="ButtonLink" to="/cadastro/video">
-        Novo vídeo
-      </Button>
+      <div className="search-input filled">
+        <input type="search" />
+        <span />
+      </div>
     </header>
   );
 }
