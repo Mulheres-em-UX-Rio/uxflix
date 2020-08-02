@@ -46,9 +46,14 @@ function CadastroCategoria() {
 
   return (
     <DefaultParent>
+
+      <Link to="/" className="return-btn">
+        Voltar
+      </Link>
+
       <h1>
-        Cadastro de Categoria:
-        {values.nome}
+        Cadastro de Categoria
+        {/* {values.nome} */}
       </h1>
 
       <form onSubmit={function handleSubmit(infosDoEvento) {
@@ -58,7 +63,7 @@ function CadastroCategoria() {
           ...categorias,
           values,
         ]);
-        
+
         setValues(valoresIniciais);
       }}
       >
@@ -91,17 +96,14 @@ function CadastroCategoria() {
         </button>
       </form>
 
-      <ul>
+      {/* <ul>
         {categorias.map((categoria) => (
           <li key={`${categoria.id}`}>
             {categoria.titulo}
           </li>
         ))}
-      </ul>
+      </ul> */}
 
-      <Link to="/">
-        Ir para home
-      </Link>
     </DefaultParent>
   );
 }
