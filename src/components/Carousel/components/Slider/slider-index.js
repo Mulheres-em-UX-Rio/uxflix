@@ -21,15 +21,18 @@ const Container = styled.ul`
   }
   
   .slick-prev {
-    left: 0;
+    left: 2%;
   }
   .slick-next {
     right: 16px;
   }
-  /* .slick-list {
-    padding: 100px 0;
-    margin: -100px 0;
-  } */
+  .slick-list {
+    min-height: 210px;
+    height: unset;
+    display: grid;
+    align-items: center;
+    padding-left: 5%;
+  }
 `;
 
 export const SliderItem = styled.li`
