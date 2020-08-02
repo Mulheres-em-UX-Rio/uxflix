@@ -58,7 +58,7 @@ function CadastroCategoria() {
           ...categorias,
           values,
         ]);
-
+        
         setValues(valoresIniciais);
       }}
       >
@@ -71,7 +71,7 @@ function CadastroCategoria() {
         />
 
         <FormField
-          label="Descrição:"
+          label="Descrição"
           type="textarea"
           name="descricao"
           value={values.descricao}

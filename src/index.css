@@ -9,12 +9,14 @@
 * {
   box-sizing: border-box;
   font-family: 'Roboto-Regular', sans-serif;
+  box-sizing: border-box;
+  outline: none;
 }
 
 :root {
-  --primary: #2A7AE4;
-  --black: #000000;
-  --blackLighter: #9E9E9E;
+  --primary: #ff937e;
+  --black: #101010;
+  --blackLighter: #b7b7b7;
   --grayLight: #F5F5F5;
   --grayMedium: #e5e5e5; 
   --white: #FFFFFF;
@@ -31,6 +33,8 @@ body {
 
 a {
   color: inherit;
+  font-style: unset;
+  text-decoration: none;
 }
 
 #root {

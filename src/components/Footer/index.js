@@ -4,16 +4,25 @@ import { FooterBase } from './styles';
 function Footer() {
   return (
     <FooterBase>
-      <a href="https://www.alura.com.br/">
-        <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura" />
+      <div>
+        <p>
+          Feito com <i>♥</i> por
+          {' '}
+          <a href="https://www.maismulheresux.com/">
+            +Mulheres em UX
+          </a>
+        </p>
+        <p className="alura">
+          Durante a Imersão React da
+          {' '}
+          <a href="https://www.alura.com.br/">
+            Alura
+          </a>
+        </p>
+      </div>
+      <a href="https://www.maismulheresux.com/">
+        contato@maismulheresux.com
       </a>
-      <p>
-        Orgulhosamente criado durante a
-        {' '}
-        <a href="https://www.alura.com.br/">
-          Imersão React da Alura
-        </a>
-      </p>
     </FooterBase>
   );
 }

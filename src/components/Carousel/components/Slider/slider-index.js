@@ -26,10 +26,15 @@ const Container = styled.ul`
   .slick-next {
     right: 16px;
   }
+  /* .slick-list {
+    padding: 100px 0;
+    margin: -100px 0;
+  } */
 `;
 
 export const SliderItem = styled.li`
-  margin-right: 16px;
+  /* margin-right: 16px; */
+  margin-right: 4px;
   img {
     margin: 16px;
     width: 298px;
@@ -37,7 +42,6 @@ export const SliderItem = styled.li`
     object-fit: cover;
   }
 `;
-
 
 const Slider = ({ children }) => (
   <Container>
@@ -48,6 +52,7 @@ const Slider = ({ children }) => (
       centerMode: false,
       variableWidth: true,
       adaptiveHeight: true,
+      swipeToSlide: true,
     }}
     >
       {children}
@@ -55,4 +60,4 @@ const Slider = ({ children }) => (
   </Container>
 );
 
-export default Slider; 
+export default Slider;
