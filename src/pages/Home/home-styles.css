@@ -24,6 +24,11 @@
     flex-direction: column;
     margin-bottom: 50px;
 }
+.banner-main section img {
+    width: 85%;
+    height: auto;
+    align-self: center;
+}
 h2 {
     font-style: normal;
     font-weight: 300;

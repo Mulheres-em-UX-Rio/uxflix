@@ -6,7 +6,7 @@ import Carousel from '../../components/Carousel/carousel-index';
 import Footer from '../../components/Footer/footer-index';
 import './home-styles.css';
 
-import imgBanner from '../../assets/imgs/uxflix-logo-purple.svg';
+import imgBanner from '../../assets/imgs/logo+mulheres-white.png';
 import { Link } from 'react-router-dom';
 import Button from '../../components/Button/button-index';
 
