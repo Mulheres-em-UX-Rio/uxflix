@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import DefaultParent from '../../../components/DefaultParent/default_parent-index';
-import FormField from '../../../components/FormField';
+import FormField from '../../../components/FormField/form_field-index';
 
 function CadastroCategoria() {
   const valoresIniciais = {
