@@ -2,8 +2,6 @@ import React from 'react';
 import './menu-styles.css';
 import { Link } from 'react-router-dom';
 
-import Button from '../Button/button-index';
-
 import Logo from '../../assets/imgs/uxflix-logo-pink.svg';
 
 function Menu() {

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import VideoIframeResponsive from './components/VideoIframeResponsive/banner_video-index';
-import { BannerMainContainer, ContentAreaContainer, WatchButton } from './banner_main-styles';
+import { BannerMainContainer, ContentAreaContainer } from './banner_main-styles';
 
 import Button from '../Button/button-index';
 

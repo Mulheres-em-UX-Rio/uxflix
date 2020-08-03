@@ -7,9 +7,13 @@ import useForm from '../../../hooks/useForm';
 
 function CadastroCategoria() {
   const valoresIniciais = {
-    nome: '',
-    descricao: '',
+    id: '',
+    titulo: '',
     cor: '',
+    link_extra: {
+      text: '',
+      url: '',
+    },
   };
 
   const { handleChange, values, clearForm } = useForm(valoresIniciais);
@@ -19,11 +23,11 @@ function CadastroCategoria() {
   useEffect(() => {
     const URL_TOP = window.location.hostname.includes('localhost')
       ? 'http://localhost:8080/categorias'
-      : 'https://devsoutinhoflix.herokuapp.com/categorias';
-    // E a ju ama variáveis
+      : 'https://muxflix.herokuapp.com/categorias';
     fetch(URL_TOP)
       .then(async (respostaDoServidor) => {
         const resposta = await respostaDoServidor.json();
+
         setCategorias([
           ...resposta,
         ]);
@@ -67,24 +71,25 @@ function CadastroCategoria() {
           values,
         ]);
 
+        console.log(categorias);
         clearForm();
       }}
       >
 
         <FormField
           label="Nome da Categoria"
-          name="nome"
-          value={values.nome}
+          name="titulo"
+          value={values.titulo}
           onChange={handleChange}
         />
 
-        <FormField
+        {/* <FormField
           label="Descrição"
           type="textarea"
           name="descricao"
           value={values.descricao}
           onChange={handleChange}
-        />
+        /> */}
 
         <FormField
           label="Cor"
@@ -94,7 +99,7 @@ function CadastroCategoria() {
           onChange={handleChange}
         />
 
-        <Button>
+        <Button type="submit">
           Cadastrar
         </Button>
       </form>

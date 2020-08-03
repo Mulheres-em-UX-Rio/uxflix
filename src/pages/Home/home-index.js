@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
-import Menu from '../../components/Menu/menu-index';
-import dadosIniciais from '../../data/dados_iniciais.json';
-import BannerMain from '../../components/BannerMain/banner_main-index';
 import Carousel from '../../components/Carousel/carousel-index';
-import Footer from '../../components/Footer/footer-index';
 import DefaultParent from '../../components/DefaultParent/default_parent-index';
 import categoriasRepository from '../../repositories/categorias';
 import './home-styles.css';
@@ -19,7 +15,7 @@ function Home() {
     // http://localhost:8080/categorias?_embed=videos
     categoriasRepository.getAllWithVideos()
       .then((categoriasComVideos) => {
-        console.log(categoriasComVideos[0].videos[0]);
+        // console.log(categoriasComVideos[0].videos[0]);
         setDadosIniciais(categoriasComVideos);
       })
       .catch((err) => {
@@ -43,7 +39,7 @@ function Home() {
           </Button>
         </section>
         <section>
-          <img src={imgBanner} />
+          <img src={imgBanner} alt="Logo +Mulheres em UX" />
         </section>
       </div>
 

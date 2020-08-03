@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Button = styled.a`
+const Button = styled.button`
     width: max-content;
     color: var(--black);
     border: none;
@@ -17,7 +17,7 @@ const Button = styled.a`
     text-decoration: none;
     display: inline-block;
     transition: all ease-in-out .1s;
-    
+
     &:hover,
     &:focus {
         background-color: #ea8774;

@@ -12,14 +12,14 @@ function Footer() {
           {' '}
           por
           {' '}
-          <a href="http://www.maismulheresux.com/" target="_blank">
+          <a href="http://www.maismulheresux.com/" target="_blank" rel="noopener noreferrer">
             +Mulheres em UX
           </a>
         </p>
         <p className="alura">
           Durante a Imersão React da
           {' '}
-          <a href="https://www.alura.com.br/" target="_blank">
+          <a href="https://www.alura.com.br/" target="_blank" rel="noopener noreferrer">
             Alura
           </a>
         </p>
