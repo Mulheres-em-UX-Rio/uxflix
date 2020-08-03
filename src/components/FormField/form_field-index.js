@@ -31,6 +31,7 @@ Label.Text = styled.span`
   font-weight: 300;
   
   transition: .1s ease-in-out;
+  width: max-content;
 `;
 
 const Input = styled.input`
