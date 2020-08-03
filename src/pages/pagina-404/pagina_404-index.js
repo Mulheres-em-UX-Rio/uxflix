@@ -27,7 +27,7 @@ function Pagina404() {
         <div className="pixelart-to-css" />
       </section>
       <section style={{ float: 'right' }}>
-        <SnakeGame />
+        {/* <SnakeGame /> */}
       </section>
     </DefaultParent>
   );
