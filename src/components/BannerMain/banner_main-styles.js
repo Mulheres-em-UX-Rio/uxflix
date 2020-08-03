@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 
 export const ContentAreaContainer = styled.section`
-  margin-left: 5%;
-  margin-right: 5%;
+  margin: 0 5%;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   position: relative;
   z-index: 10;
   @media (max-width: 800px) {
@@ -16,7 +15,7 @@ export const ContentAreaContainer = styled.section`
 `;
 
 ContentAreaContainer.Item = styled.div`
-  width: 50%;
+  width: 45%;
   display: inline-block;
   margin-bottom: 50px;
   @media (max-width: 800px) {
@@ -25,7 +24,7 @@ ContentAreaContainer.Item = styled.div`
 `;
 
 ContentAreaContainer.Category = styled.h1`
-  font-family: Roboto;
+  font-family: "Klavika-Regular";
   font-style: normal;
   font-weight: normal;
   font-size: 60px;
@@ -55,7 +54,7 @@ ContentAreaContainer.Title = styled.h2`
   font-style: normal;
   font-weight: 300;
   font-size: 40px;
-  line-height: 1;
+  line-height: 45px;
   margin-top: 0;
   margin-bottom: 32px;
 
@@ -66,12 +65,12 @@ ContentAreaContainer.Title = styled.h2`
 `;
 
 export const BannerMainContainer = styled.section`
-  height: 80vh;
+  height: 70vh;
   position: relative;
   color: #fff;
-  background-image: ${({ backgroundImage }) => `url(${backgroundImage})`}; 
+  /* background-image: ${({ backgroundImage }) => `url(${backgroundImage})`}; 
   background-size: cover;
-  background-position: center;
+  background-position: center; */
   @media (max-width: 800px) {
     height: auto;
     min-height: 50vh;
@@ -91,7 +90,7 @@ export const BannerMainContainer = styled.section`
   &:before {
     top: 0;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    /* background: rgba(0,0,0,0.5); */
   }
 
   &:after {
@@ -101,7 +100,7 @@ export const BannerMainContainer = styled.section`
 `;
 
 export const WatchButton = styled.button`
-  font-family: 'Roboto', sans-serif;
+  font-family: "Klavika-Regular";
   box-sizing: border-box;
   cursor: pointer;
   padding: 16px 24px;

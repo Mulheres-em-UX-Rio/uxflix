@@ -2,27 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 
 import Home from './pages/Home/home-index';
 import CadastroVideo from './pages/cadastro/Video/video-index';
 import CadastroCategoria from './pages/cadastro/Categoria/categoria-index';
 
-// Desafio master blaster na descrição
-// Colocar um jogo ou brincadeira nessa página:
 const Pagina404 = () => (
   <div style={{
     display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column',
   }}
   >
-    <h1>Ops, quebrou tudo :O</h1>
+    <h1>Vish, que estranho!</h1>
+    <p>Não achei a página que você tá procurando.</p>
     <p>
-      <a href="/">Você pode jogar ou voltar pra home :)</a>
-    </p>
-    <p>
-      Ou
+      Você pode
       {' '}
-      <a href="https://www.youtube.com/watch?v=jOAU81jdi-c&list=PLTcmLKdIkOWmeNferJ292VYKBXydGeDej">aprender a fazer o jogo</a>
+      <Link to="/">voltar pra home</Link>
+      {' '}
+      ou jogar esse joguinho aqui comigo.
     </p>
     {/*
       Pessoal, quem quiser fazer o desafio do Flappy Bird, da pra usar esse iframe aqui:

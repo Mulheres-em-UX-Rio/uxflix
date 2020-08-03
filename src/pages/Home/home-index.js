@@ -1,48 +1,73 @@
-import React from 'react';
-import Menu from '../../components/Menu/menu-index';
-import dadosIniciais from '../../data/dados_iniciais.json';
-import BannerMain from '../../components/BannerMain';
-import Carousel from '../../components/Carousel';
-import Footer from '../../components/Footer';
+import React, { useState } from 'react';
+import Carousel from '../../components/Carousel/carousel-index';
+import DefaultParent from '../../components/DefaultParent/default_parent-index';
+import categoriasRepository from '../../repositories/categorias';
+import './home-styles.css';
+
+import imgBanner from '../../assets/imgs/logo+mulheres-white.png';
+import { Link } from 'react-router-dom';
+import Button from '../../components/Button/button-index';
 
 function Home() {
+  const [dadosIniciais, setDadosIniciais] = useState([]);
+
+  useState(() => {
+    // http://localhost:8080/categorias?_embed=videos
+    categoriasRepository.getAllWithVideos()
+      .then((categoriasComVideos) => {
+        // console.log(categoriasComVideos[0].videos[0]);
+        setDadosIniciais(categoriasComVideos);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }, []);
+
   return (
-    <div style={{ background: '#141414' }}>
-      <Menu />
+    <DefaultParent paddingAll={0}>
+      {dadosIniciais.length === 0 && (<div>Loading...</div>)}
 
-      <BannerMain
-        videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
-        url={dadosIniciais.categorias[0].videos[0].url}
-        videoDescription="O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"
-      />
+      <div className="banner-main">
+        <section>
+          <h2>
+            Repositório colaborativo de conteúdos relacionados à disciplina de
+            {' '}
+            <i>Experiência do Usuário</i>
+          </h2>
+          <Button as={Link} className="ButtonLink" to="/cadastro/video">
+            Enviar conteúdo
+          </Button>
+        </section>
+        <section>
+          <img src={imgBanner} alt="Logo +Mulheres em UX" />
+        </section>
+      </div>
 
-      <Carousel
-        ignoreFirstVideo
-        category={dadosIniciais.categorias[0]}
-      />
+      {dadosIniciais.map((categoria, indice) => {
+        // if (indice === 0) {
+        //   return (
+        //     <div key={categoria.id}>
+        //       <BannerMain
+        //         videoTitle={dadosIniciais[0].videos[0].titulo}
+        //         url={dadosIniciais[0].videos[0].url}
+        //         videoDescription={dadosIniciais[0].videos[0].description}
+        //       />
+        //       <Carousel
+        //         ignoreFirstVideo
+        //         category={dadosIniciais[0]}
+        //       />
+        //     </div>
+        //   );
+        // }
 
-      <Carousel
-        category={dadosIniciais.categorias[1]}
-      />
-
-      <Carousel
-        category={dadosIniciais.categorias[2]}
-      />
-
-      <Carousel
-        category={dadosIniciais.categorias[3]}
-      />
-
-      <Carousel
-        category={dadosIniciais.categorias[4]}
-      />
-
-      <Carousel
-        category={dadosIniciais.categorias[5]}
-      />
-
-      <Footer />
-    </div>
+        return (
+          <Carousel
+            key={categoria.id}
+            category={categoria}
+          />
+        );
+      })}
+    </DefaultParent>
   );
 }
 

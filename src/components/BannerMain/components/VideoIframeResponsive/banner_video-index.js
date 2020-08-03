@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { VideoContainer, ResponsiveIframe } from './styles';
+import { VideoContainer, ResponsiveIframe } from './banner_video-styles';
 
 function YouTubeIframeResponsive({ youtubeID }) {
   return (
