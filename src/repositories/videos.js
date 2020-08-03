@@ -1,4 +1,4 @@
-import config from '../config';
+import config from '../config/config-index';
 
 const URL_VIDEOS = `${config.URL_BACKEND_TOP}/videos`;
 

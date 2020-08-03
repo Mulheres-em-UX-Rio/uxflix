@@ -34,7 +34,7 @@ function Home() {
             {' '}
             <i>Experiência do Usuário</i>
           </h2>
-          <Button as={Link} className="ButtonLink" to="/cadastro/video">
+          <Button as={Link} className="ButtonLink" to="/cadastro/conteudo">
             Enviar conteúdo
           </Button>
         </section>
