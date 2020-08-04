@@ -9,28 +9,38 @@ import FormField from '../FormField/form_field-index';
 
 function Menu() {
   const [search, setSearch] = useState([]);
-  const searchWords = (search.map(({ tags }) => tags));
+  const searchWords = (search.map(({ tags }) => tags.split(', ')));
   const { handleChange, values, clearForm } = useForm({
     search: '',
   });
   const hasValue = values.search;
   onChange(hasValue);
 
+  // console.log(searchWords);
+
+  // let suggestions = [];
+  // for (let i=0; i < searchWords.length; i++) {
+  //   suggestions += (searchWords[i].slice(0, searchWords[i].length))+', ';
+  // //   suggestions += ('"'+(searchWords[i].split(', '))+'"')+', ';
+  // }
+
+  // console.log(suggestions);
+
   function onChange(word) {
     conteudosRepository
       .getAllWithSearch(word)
       .then((returnSearchFromServer) => {
-        console.log((returnSearchFromServer));
+        // console.log((returnSearchFromServer));
       });
   }
 
-  useEffect(() => {
-    conteudosRepository
-      .getAll(values.search)
-      .then((searchFromServer) => {
-        setSearch(searchFromServer);
-      });
-  }, []);
+  // useEffect(() => {
+  //   conteudosRepository
+  //     .getAll(values.search)
+  //     .then((searchFromServer) => {
+  //       setSearch(searchFromServer);
+  //     });
+  // }, []);
 
   return (
     <header className="header">
@@ -46,7 +56,7 @@ function Menu() {
           name="search"
           value={hasValue}
           onChange={handleChange}
-          suggestions={searchWords}
+          // suggestions={searchWords}
         />
         <div
           className={hasValue ? 'controls filled' : 'controls'}
