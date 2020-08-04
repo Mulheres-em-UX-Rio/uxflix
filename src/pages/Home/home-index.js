@@ -48,8 +48,8 @@ function Home() {
           return (
             <div key={tipo.id}>
               {/* <Carousel
-                ignoreFirstVideo
-                category={dadosIniciais[0]}
+                key={tipo.id}
+                type={tipo}
               /> */}
             </div>
           );
