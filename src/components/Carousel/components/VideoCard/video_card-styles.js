@@ -2,23 +2,25 @@ import styled from 'styled-components';
 
 export const VideoCardContainer = styled.a`
   text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
+  /* overflow: hidden;
+  cursor: pointer; */
   color: white;
-  flex: 0 0 298px;
+  /* flex: 0 0 298px;
   width: 250px;
-  height: 150px;
+  height: 150px; */
+  width: 100%;
+  height: 100%;
   background-image: ${({ url }) => `url(${url})`};
   background-size: cover;
   background-position: center;
   position: relative;
-  display: flex;
+  /* display: flex;
   align-items: flex-end;
-  padding: 16px;
+  padding: 16px; */
   transition: all 0.3s ease-in-out 0s;
   &:hover,
   &:focus {
-    transform: scale(1.3);
+    /* transform: scale(1.3);
     z-index: 1;
     box-shadow: 0px 0px 6px #000000;
     &::before {
@@ -29,7 +31,7 @@ export const VideoCardContainer = styled.a`
       top: 0;
       left: 0;
       background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
-    }
+    } */
     /* &::after {
       position: absolute;
       content: "";

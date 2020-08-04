@@ -145,6 +145,65 @@ i {
   height: 100%;
 }
 
+.card-parent {
+  flex: 0 0 298px;
+  width: 250px;
+  height: 150px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out 0s;
+  display: flex;
+  align-items: flex-end;
+}
+.card-parent:hover {
+  transform: scale(1.3);
+  z-index: 1;
+  box-shadow: 0px 0px 6px #000000;
+}
+.card-parent .card-info {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 12px;
+  overflow: hidden;
+  background-color: var(--white);
+}
+.card-parent .card-info p {
+  width: 70%;
+  font-size: 25px;
+  line-height: 25px;
+  font-family: "Klavika-Bold";
+  color: var(--black);
+}
+.card-parent .card-info.listen {
+  background-color: #0097a7;
+}
+.card-parent .card-info.listen p {
+  color: var(--white);
+}
+.card-parent .card-info img {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+  margin: 0;
+  object-fit: unset;
+}
+.card-parent .card-options {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+  display: none;
+}
+.card-parent:hover .card-options {
+  display: flex;
+}
 
 
 /* Unicorn 404 */

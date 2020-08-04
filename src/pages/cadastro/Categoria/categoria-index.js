@@ -70,8 +70,6 @@ function CadastroCategoria() {
           ...categorias,
           values,
         ]);
-
-        console.log(categorias);
         clearForm();
       }}
       >

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="203" viewBox="0 0 350 203">
+  <g id="Group_22" data-name="Group 22" transform="translate(-127 -770)">
+    <g id="Rectangle_1" data-name="Rectangle 1" transform="translate(127 770)" fill="#000" stroke="#000" stroke-width="1">
+      <rect width="350" height="203" stroke="none"/>
+      <rect x="0.5" y="0.5" width="349" height="202" fill="none"/>
+    </g>
+    <text id="T" transform="translate(156 816)" fill="#ffffff" font-size="25" font-family="Klavika-Bold, Klavika" font-weight="700"><tspan x="0" y="0">Translate</tspan></text>
+  </g>
+</svg>

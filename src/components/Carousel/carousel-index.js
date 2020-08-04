@@ -7,7 +7,7 @@ function VideoCardGroup({
   key,
   type,
 }) {
-  const typeTitle = type.title;
+  const typeTitle = type.titulo;
   const { conteudos } = type;
   return (
     <VideoCardGroupContainer>
@@ -20,15 +20,15 @@ function VideoCardGroup({
       )}
       <Slider>
         {conteudos.map((conteudo, index) => {
-          // if (key && index === 0) {
-          //   return null;
-          // }
 
           return (
             <SliderItem key={conteudo.title}>
               <VideoCard
+                videoCat={type.id}
                 videoTitle={conteudo.title}
+                videoDesc={conteudo.description}
                 videoURL={conteudo.url}
+                videoTags={conteudo.tags}
               />
             </SliderItem>
           );
