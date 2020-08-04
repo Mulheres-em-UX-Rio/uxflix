@@ -10,18 +10,17 @@ import FormField from '../FormField/form_field-index';
 function Menu() {
   const [search, setSearch] = useState([]);
   const searchWords = (search.map(({ tags }) => tags));
-  let hasValue;
   const { handleChange, values, clearForm } = useForm({
     search: '',
   });
-  // }, onChange());
-  hasValue = values.search;
+  const hasValue = values.search;
+  onChange(hasValue);
 
-  function onChange(hasValue) {
+  function onChange(word) {
     conteudosRepository
-      .getAllWithSearch(hasValue)
+      .getAllWithSearch(word)
       .then((returnSearchFromServer) => {
-        console.log('isso', returnSearchFromServer);
+        console.log(returnSearchFromServer);
       });
   }
 
@@ -53,7 +52,6 @@ function Menu() {
           className={hasValue ? 'controls filled' : 'controls'}
           onClick={function handleClick(infosDoEvento) {
             infosDoEvento.preventDefault();
-            console.log(infosDoEvento);
             clearForm();
           }}
         />

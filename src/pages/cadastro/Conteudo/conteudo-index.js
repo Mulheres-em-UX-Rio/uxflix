@@ -62,7 +62,6 @@ function CadastroConteudo() {
           tipoId: tipoEscolhido.id,
         })
           .then(() => {
-            console.log('Cadastrado com sucesso!');
             alert('Conteúdo cadastrado com sucesso!');
             history.push('/');
           });
@@ -92,6 +91,7 @@ function CadastroConteudo() {
 
         <FormField
           label="Descrição"
+          type="textarea"
           name="desc"
           value={values.desc}
           onChange={handleChange}

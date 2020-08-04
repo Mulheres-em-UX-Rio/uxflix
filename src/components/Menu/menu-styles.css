@@ -1,5 +1,9 @@
 .logo {
   max-width: 100px;
+  transition: all ease-in-out .3s;
+}
+.logo:hover {
+  transform: scale(1.05);
 }
 
 @media (max-width: 800px) {
@@ -86,7 +90,7 @@ body {
   display: inline-block;
   transition: opacity .3s;
   border-radius: 25px;
-  opacity: .6;
+  opacity: .4;
 }
 .search-input:hover,
 .search-input:focus {
@@ -114,7 +118,7 @@ body {
   border-radius: 25px;
   background-image: url('../../assets/imgs/icon-search.svg');
   background-repeat: no-repeat;
-  background-size: 35%;
+  background-size: 40%;
   background-position: center;
   cursor: pointer;
   position: absolute;
@@ -124,7 +128,7 @@ body {
 }
 .search-input .filled.controls {
   background-image: url('../../assets/imgs/icon-clear_search.svg');
-  background-size: 25%;
+  background-size: 30%;
 }
 .search-input span {
   display: none;
@@ -135,3 +139,7 @@ input[type='search']::-webkit-search-decoration,
       input[type='search']::-webkit-search-results-decoration {
         -webkit-appearance: none;
       }
+
+input[type='search']::-webkit-calendar-picker-indicator {
+  display: none;
+}

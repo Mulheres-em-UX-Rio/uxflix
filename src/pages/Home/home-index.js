@@ -6,8 +6,9 @@ import tiposRepository from '../../repositories/tipos';
 import './home-styles.css';
 
 // import imgBanner from '../../assets/imgs/logo+mulheres-white.png';
-import imgBanner from '../../assets/imgs/banner-home.svg';
+import imgBanner from '../../assets/imgs/banner-home2.svg';
 import Button from '../../components/Button/button-index';
+import Loading from '../../components/Loading/loading.index';
 
 function Home() {
   const [dadosIniciais, setDadosIniciais] = useState([]);
@@ -25,7 +26,8 @@ function Home() {
 
   return (
     <DefaultParent paddingAll={0}>
-      {dadosIniciais.length === 0 && (<div>Loading...</div>)}
+
+      {dadosIniciais.length === 0 && (<Loading />) }
 
       <div className="banner-main">
         <section>
