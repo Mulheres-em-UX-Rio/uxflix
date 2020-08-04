@@ -225,6 +225,18 @@
       "tags": "Ux",
       "tipoId": 3,
       "id": 18
+    },
+    {
+      "approved": false,
+      "views": 0,
+      "stars": 0,
+      "date": "2020-08-04T15:17:08.166Z",
+      "title": "O QUE SÃO DESIGN SYSTEMS?",
+      "description": "Neste episódio eu faço uma introducão ao universo dos Design Systems. Qual o conceito por detrás de um Design System, como ele é construído e para que serve.",
+      "url": "https://www.youtube.com/watch?v=mijR1jJ-waA",
+      "tags": "Design System, UXlab, UX, Design",
+      "tipoId": 2,
+      "id": 19
     }
   ]
 }
