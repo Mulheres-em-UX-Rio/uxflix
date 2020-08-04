@@ -8,7 +8,7 @@ const Main = styled.main`
   background-color: var(--black);
   color: var(--white);
   flex: 1;
-  padding: 50px 5%;
+  padding: 2% 5%;
   border-top: 1px solid #252525;
   ${({ paddingAll }) => css`
     padding: ${paddingAll};

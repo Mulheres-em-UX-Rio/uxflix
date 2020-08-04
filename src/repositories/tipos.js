@@ -7,6 +7,7 @@ function getAll() {
     .then(async (respostaDoServidor) => {
       if (respostaDoServidor.ok) {
         const resposta = await respostaDoServidor.json();
+        console.log(resposta);
         return resposta;
       }
 
@@ -14,11 +15,12 @@ function getAll() {
     });
 }
 
-function getAllWithVideos() {
-  return fetch(`${URL_TYPES}?_embed=videos`)
+function getAllWithContent() {
+  return fetch(`${URL_TYPES}?_embed=conteudos`)
     .then(async (respostaDoServidor) => {
       if (respostaDoServidor.ok) {
         const resposta = await respostaDoServidor.json();
+        console.log(resposta);
         return resposta;
       }
 
@@ -27,6 +29,6 @@ function getAllWithVideos() {
 }
 
 export default {
-  getAllWithVideos,
+  getAllWithContent,
   getAll,
 };

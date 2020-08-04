@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Carousel from '../../components/Carousel/carousel-index';
 import DefaultParent from '../../components/DefaultParent/default_parent-index';
-import categoriasRepository from '../../repositories/categorias';
+import tiposRepository from '../../repositories/tipos';
 import './home-styles.css';
 
 import imgBanner from '../../assets/imgs/logo+mulheres-white.png';
-import { Link } from 'react-router-dom';
 import Button from '../../components/Button/button-index';
 
 function Home() {
@@ -13,10 +13,10 @@ function Home() {
 
   useState(() => {
     // http://localhost:8080/categorias?_embed=videos
-    categoriasRepository.getAllWithVideos()
-      .then((categoriasComVideos) => {
-        // console.log(categoriasComVideos[0].videos[0]);
-        setDadosIniciais(categoriasComVideos);
+    tiposRepository.getAllWithContent()
+      .then((tiposComConteudo) => {
+        console.log(tiposComConteudo);
+        setDadosIniciais(tiposComConteudo);
       })
       .catch((err) => {
         console.log(err.message);
@@ -43,7 +43,7 @@ function Home() {
         </section>
       </div>
 
-      {dadosIniciais.map((categoria, indice) => {
+      {dadosIniciais.map((tipo) => {
         // if (indice === 0) {
         //   return (
         //     <div key={categoria.id}>
@@ -62,8 +62,8 @@ function Home() {
 
         return (
           <Carousel
-            key={categoria.id}
-            category={categoria}
+            key={tipo.id}
+            type={tipo}
           />
         );
       })}

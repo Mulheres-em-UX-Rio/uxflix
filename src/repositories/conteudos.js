@@ -3,7 +3,7 @@ import config from '../config/config-index';
 const URL_CONTENT = `${config.URL_BACKEND_TOP}/conteudos`;
 
 function create(objetoDoVideo) {
-  return fetch(`${URL_CONTENT}?_embed=videos`, {
+  return fetch(`${URL_CONTENT}?_embed=conteudos`, {
     method: 'POST',
     headers: {
       'Content-type': 'application/json',

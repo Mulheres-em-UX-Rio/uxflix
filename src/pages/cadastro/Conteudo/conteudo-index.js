@@ -11,13 +11,21 @@ import 'moment-timezone';
 function CadastroConteudo() {
   const history = useHistory();
   const [tipos, setTipos] = useState([]);
-  const categoryTitles = tipos.map(({ title }) => title);
+  // const typeTitles = tipos.map(({ titulo }) => titulo);
+
+  const typeTitles = tipos.map(({ id, titulo }) => {
+    if (id !== 0 && id !== 1) {
+      return (titulo);
+    }
+  });
+
   const { handleChange, values } = useForm({
     title: '',
     type: '',
     url: '',
     desc: '',
     tags: '',
+    date: '',
   });
 
   useEffect(() => {
@@ -28,7 +36,7 @@ function CadastroConteudo() {
       });
   }, []);
 
-  let createDate = new Date();
+  const createDate = new Date();
   // createDate = Moment().format("DD-MM-YYYY hh:mm:ss");
 
   return (
@@ -43,7 +51,7 @@ function CadastroConteudo() {
       <form onSubmit={(event) => {
         event.preventDefault();
 
-        const tipoEscolhido = tipos.find((tipo) => tipo.title === values.type);
+        const tipoEscolhido = tipos.find((tipo) => tipo.titulo === values.type);
 
         conteudosRepository.create({
           approved: false,
@@ -63,11 +71,11 @@ function CadastroConteudo() {
       }}
       >
         <FormField
-          label="Tipo"
+          label="Categoria"
           name="type"
           value={values.type}
           onChange={handleChange}
-          suggestions={categoryTitles}
+          suggestions={typeTitles}
         />
 
         <FormField

@@ -4,19 +4,19 @@ import VideoCard from './components/VideoCard/video_card-index';
 import Slider, { SliderItem } from './components/Slider/slider-index';
 
 function VideoCardGroup({
-  ignoreFirstVideo,
-  category,
+  key,
+  type,
 }) {
-  const categoryTitle = category.titulo;
+  const typeTitle = type.title;
   // const categoryColor = category.cor;
   // const categoryExtraLink = category.link_extra;
-  const { videos } = category;
+  const { conteudos } = type;
   return (
     <VideoCardGroupContainer>
-      {categoryTitle && (
+      {typeTitle && (
         <>
           <Title>
-            {categoryTitle}
+            {typeTitle}
           </Title>
           {/* {categoryExtraLink
             && (
@@ -27,16 +27,16 @@ function VideoCardGroup({
         </>
       )}
       <Slider>
-        {videos.map((video, index) => {
-          if (ignoreFirstVideo && index === 0) {
+        {conteudos.map((conteudo, index) => {
+          if (key && index === 0) {
             return null;
           }
 
           return (
-            <SliderItem key={video.titulo}>
+            <SliderItem key={conteudo.title}>
               <VideoCard
-                videoTitle={video.titulo}
-                videoURL={video.url}
+                videoTitle={conteudo.title}
+                videoURL={conteudo.url}
                 // categoryColor={categoryColor}
               />
             </SliderItem>
