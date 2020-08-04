@@ -11,8 +11,6 @@ import 'moment-timezone';
 function CadastroConteudo() {
   const history = useHistory();
   const [tipos, setTipos] = useState([]);
-  // const typeTitles = tipos.map(({ titulo }) => titulo);
-
   const typeTitles = tipos.map(({ id, titulo }) => {
     if (id !== 0 && id !== 1) {
       return (titulo);
@@ -25,7 +23,6 @@ function CadastroConteudo() {
     url: '',
     desc: '',
     tags: '',
-    date: '',
   });
 
   useEffect(() => {
@@ -62,10 +59,11 @@ function CadastroConteudo() {
           description: values.desc,
           url: values.url,
           tags: values.tags,
-          type: tipoEscolhido.id,
+          typeId: tipoEscolhido.id,
         })
           .then(() => {
             console.log('Cadastrado com sucesso!');
+            alert('Conteúdo cadastrado com sucesso!');
             history.push('/');
           });
       }}

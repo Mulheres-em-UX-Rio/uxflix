@@ -7,7 +7,6 @@ function getAll() {
     .then(async (respostaDoServidor) => {
       if (respostaDoServidor.ok) {
         const resposta = await respostaDoServidor.json();
-        console.log(resposta);
         return resposta;
       }
 
@@ -20,7 +19,6 @@ function getAllWithContent() {
     .then(async (respostaDoServidor) => {
       if (respostaDoServidor.ok) {
         const resposta = await respostaDoServidor.json();
-        console.log(resposta);
         return resposta;
       }
 

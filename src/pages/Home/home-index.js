@@ -15,7 +15,6 @@ function Home() {
     // http://localhost:8080/categorias?_embed=videos
     tiposRepository.getAllWithContent()
       .then((tiposComConteudo) => {
-        console.log(tiposComConteudo);
         setDadosIniciais(tiposComConteudo);
       })
       .catch((err) => {
@@ -43,22 +42,17 @@ function Home() {
         </section>
       </div>
 
-      {dadosIniciais.map((tipo) => {
-        // if (indice === 0) {
-        //   return (
-        //     <div key={categoria.id}>
-        //       <BannerMain
-        //         videoTitle={dadosIniciais[0].videos[0].titulo}
-        //         url={dadosIniciais[0].videos[0].url}
-        //         videoDescription={dadosIniciais[0].videos[0].description}
-        //       />
-        //       <Carousel
-        //         ignoreFirstVideo
-        //         category={dadosIniciais[0]}
-        //       />
-        //     </div>
-        //   );
-        // }
+      {dadosIniciais.map((tipo, indice) => {
+        if (indice === 0 || indice === 1) {
+          return (
+            <div key={tipo.id}>
+              {/* <Carousel
+                ignoreFirstVideo
+                category={dadosIniciais[0]}
+              /> */}
+            </div>
+          );
+        }
 
         return (
           <Carousel

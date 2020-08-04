@@ -31,7 +31,7 @@
       "description": "Você sabe o que é UX? UX é a sigla para User eXperience - em português costumamos falar Experiência do Usuário.",
       "url": "https://www.youtube.com/watch?v=WAi6ixIfdd4",
       "tags": "Introdução, Design, UXNow",
-      "type": 2,
+      "typeId": 2,
       "id": 0
     },
     {
@@ -43,7 +43,7 @@
       "description": "Neste Papo Reto Bruno Mendes fala sobre a grande diferença entre UX  (User Experience) e UI (User Interface).",
       "url": "https://www.youtube.com/watch?v=KK_NTZI3rSY",
       "tags": "Papo reto, Design, UX, UI",
-      "type": 2,
+      "typeId": 2,
       "id": 1
     },
     {
@@ -55,7 +55,7 @@
       "description": "Este episódio é um guia com valiosas dicas sobre UX Research (Pesquisa em Experiência do Usuário), a partir do ponto de vista prático de uma das profissionais que mais admiro nesta área e que eu já acompanho há vários anos - Diana Fournier.",
       "url": "https://www.youtube.com/watch?v=C6urHjGxRE4",
       "tags": "Research, Pesquisa, UX",
-      "type": 2,
+      "typeId": 2,
       "id": 2
     },
     {
@@ -67,7 +67,7 @@
       "description": "Venha comigo se tornar um designer mitológico que usa UX e UI para resolver prolemas do usuário com foco no negócio.",
       "url": "https://open.spotify.com/show/1lrZ4zYczN8FMQtJDwOkna?si=O2Vcvs_rQ5WG0M9qTepr_g",
       "tags": "Design, Negócio, UX, UI",
-      "type": 3,
+      "typeId": 3,
       "id": 3
     },
     {
@@ -79,7 +79,7 @@
       "description": "Cursos, eventos, links, blogs, livros, referências, grupos, autores e outros caminhos para quem está interessado em começar em UX ou migrar para UX.",
       "url": "https://brasil.uxdesign.cc/como-migrar-para-ux-design-comecar-guia-completo-875db7cc3b4",
       "tags": "Introdução, Migrar carreira, UX, Guia",
-      "type": 4,
+      "typeId": 4,
       "id": 4
     },
     {
@@ -91,7 +91,7 @@
       "description": "Testes são a melhor forma de coletar evidências qualitativas para UX. Esse é um guia prático e detalhado para começar a planejar uma sessão de user testing.",
       "url": "https://brasil.uxdesign.cc/ux-design-como-organizar-uma-sess%C3%A3o-de-testes-com-usu%C3%A1rios-e99059c9cee4",
       "tags": "Pesquisa, Qualitativa, UX, Teste, Guia",
-      "type": 4,
+      "typeId": 4,
       "id": 5
     },
     {
@@ -103,7 +103,7 @@
       "description": "Criar bons textos significa facilitar o entendimento do usuário sobre a tarefa ou o produto. É sobre isso que é o UX Writing!",
       "url": "https://www.youtube.com/watch?v=sWMwlR6KTiw",
       "tags": "Writing, UX, Ferramentas, Dicas",
-      "type": 2,
+      "typeId": 2,
       "id": 6
     }
   ]

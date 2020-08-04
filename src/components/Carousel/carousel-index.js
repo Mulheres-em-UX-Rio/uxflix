@@ -28,9 +28,9 @@ function VideoCardGroup({
       )}
       <Slider>
         {conteudos.map((conteudo, index) => {
-          if (key && index === 0) {
-            return null;
-          }
+          // if (key && index === 0) {
+          //   return null;
+          // }
 
           return (
             <SliderItem key={conteudo.title}>
