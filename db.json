@@ -213,6 +213,18 @@
       "tags": "UX, UI, Design, Experiência do usuário",
       "tipoId": 4,
       "id": 17
+    },
+    {
+      "approved": false,
+      "views": 0,
+      "stars": 0,
+      "date": "2020-08-04T15:07:14.936Z",
+      "title": "DesignCast",
+      "description": "Um podcast sobre criatividade, design, UX, carreira internacional, comportamento e muitos mais. Os bastidores de um UX Designer morando em Londres. 🇬🇧🇧🇷⚡️🚀\n\nQuer aprender UX? Acesse: designcircuit.co",
+      "url": "https://open.spotify.com/show/6yaeqQcj36g3qF0JbCPDEK?si=3tmZWDtDQqGVVeA3Z3F66A",
+      "tags": "Ux",
+      "tipoId": 3,
+      "id": 18
     }
   ]
 }
