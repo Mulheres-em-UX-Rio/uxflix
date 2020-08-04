@@ -5,7 +5,8 @@ import DefaultParent from '../../components/DefaultParent/default_parent-index';
 import tiposRepository from '../../repositories/tipos';
 import './home-styles.css';
 
-import imgBanner from '../../assets/imgs/logo+mulheres-white.png';
+// import imgBanner from '../../assets/imgs/logo+mulheres-white.png';
+import imgBanner from '../../assets/imgs/banner-home.svg';
 import Button from '../../components/Button/button-index';
 
 function Home() {
