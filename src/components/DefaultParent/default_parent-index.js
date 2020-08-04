@@ -13,6 +13,9 @@ const Main = styled.main`
   ${({ paddingAll }) => css`
     padding: ${paddingAll};
   `}
+  @media (max-width: 800px) {
+    padding: 6% 5%;
+  }
 `;
 
 function PageDefault({ children, paddingAll }) {

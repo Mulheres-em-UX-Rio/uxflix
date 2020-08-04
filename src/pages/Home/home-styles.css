@@ -47,8 +47,7 @@ h2 i {
     .banner-main {
         padding-top: 100px;
         flex-direction: column;
-        height: auto;
-        min-height: 50vh;
+        height: 90vh;
     }
     .banner-main section {
         width: 100%;

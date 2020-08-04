@@ -13,9 +13,6 @@ export const FooterBase = styled.footer`
   justify-content: space-between;
   font-size: 12px;
   color: var(--blackLighter);
-  @media (max-width: 800px) {
-    margin-bottom: 50px;
-  }
   p {
     font-size: 14px;
     color: var(--grayMedium);
@@ -29,6 +26,13 @@ export const FooterBase = styled.footer`
       color: var(--primary);
       font-style: unset;
       text-decoration: none;
+    }
+  }
+  @media (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+    p {
+      text-align: center;
     }
   }
 `;

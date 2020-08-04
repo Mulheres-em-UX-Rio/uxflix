@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './menu-styles.css';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import Logo from '../../assets/imgs/uxflix-logo-pink.svg';
 import useForm from '../../hooks/useForm';
@@ -20,7 +20,7 @@ function Menu() {
     conteudosRepository
       .getAllWithSearch(word)
       .then((returnSearchFromServer) => {
-        console.log(returnSearchFromServer);
+        console.log((returnSearchFromServer));
       });
   }
 
