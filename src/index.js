@@ -13,7 +13,7 @@ ReactDOM.render(
     <Switch>
       <Route path="/" component={Home} exact />
       <Route path="/cadastro/conteudo" component={CadastroConteudo} />
-      <Route path="*" component={Pagina404} status={404} />
+      <Route path="/not-found" component={Pagina404} status={404} />
     </Switch>
   </BrowserRouter>,
   document.getElementById('root'),

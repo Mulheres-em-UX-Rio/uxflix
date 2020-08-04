@@ -32,12 +32,13 @@ function getAll() {
     });
 }
 
-function getAllWithSearch() {
-  return fetch(`${URL_CONTENT}?_expand=tipo&q=research`)
+function getAllWithSearch(search) {
+  console.log(search);
+  return fetch(`${URL_CONTENT}?_expand=tipo&q=${search}`)
     .then(async (respostaDoServidor) => {
       if (respostaDoServidor.ok) {
         const resposta = await respostaDoServidor.json();
-        console.log(resposta);
+        // console.log(resposta);
         return resposta;
       }
 
