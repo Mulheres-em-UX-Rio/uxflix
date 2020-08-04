@@ -8,8 +8,6 @@ function VideoCardGroup({
   type,
 }) {
   const typeTitle = type.title;
-  // const categoryColor = category.cor;
-  // const categoryExtraLink = category.link_extra;
   const { conteudos } = type;
   return (
     <VideoCardGroupContainer>
@@ -18,12 +16,6 @@ function VideoCardGroup({
           <Title>
             {typeTitle}
           </Title>
-          {/* {categoryExtraLink
-            && (
-            <ExtraLink href={categoryExtraLink.url} target="_blank">
-              {categoryExtraLink.text}
-            </ExtraLink>
-            )} */}
         </>
       )}
       <Slider>
@@ -37,7 +29,6 @@ function VideoCardGroup({
               <VideoCard
                 videoTitle={conteudo.title}
                 videoURL={conteudo.url}
-                // categoryColor={categoryColor}
               />
             </SliderItem>
           );

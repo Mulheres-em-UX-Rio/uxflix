@@ -59,7 +59,7 @@ function CadastroConteudo() {
           description: values.desc,
           url: values.url,
           tags: values.tags,
-          typeId: tipoEscolhido.id,
+          tipoId: tipoEscolhido.id,
         })
           .then(() => {
             console.log('Cadastrado com sucesso!');
